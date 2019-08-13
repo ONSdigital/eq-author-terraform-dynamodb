@@ -8,11 +8,6 @@ resource "aws_dynamodb_table" "survey_registry_table" {
     type = "S"
   }
 
-  attribute {
-    name = "updatedAt"
-    type = "N"
-  }
-
   tags {
     Name        = "${var.env}-survey-registry"
     Environment = "${var.env}"
