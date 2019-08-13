@@ -1,11 +1,11 @@
 resource "aws_dynamodb_table" "survey_registry_table" {
   name           = "${var.env}-survey-registry"
-  hash_key       = "id"
+  hash_key       = "eq_id"
   range_key      = "updatedAt"
   billing_mode   = "PAY_PER_REQUEST"
 
   attribute {
-    name = "id"
+    name = "eq_id"
     type = "S"
   }
 
